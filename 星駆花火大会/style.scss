@@ -1,0 +1,254 @@
+*,*::before,*::after{box-sizing:border-box}body,h1,h2,h3,h4,p,figure,blockquote,dl,dd{margin:0}ul[role="list"],ol[role="list"]{list-style:none}html:focus-within{scroll-behavior:smooth}body{min-height:100vh;text-rendering:optimizeSpeed;line-height:1.5}a:not([class]){text-decoration-skip-ink:auto}img,picture{max-width:100%;display:block}input,button,textarea,select{font:inherit}@media(prefers-reduced-motion:reduce){html:focus-within{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important}}
+
+$main-color: #0A1F32;
+$my-white: #f0f0f0;
+
+body {
+  font-family: "Yu Gothic", "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Meiryo", sans-serif;
+  background: $main-color;
+  color: $my-white;
+}
+
+section {
+  margin: 60px auto;
+  + section {
+    margin: 120px 0 0 0;
+  }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: $my-white;
+  text-decoration: none;
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.my-white {
+  color: $my-white;
+}
+
+.inner {
+  padding: 0 290px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: normal;
+  text-align: center;
+}
+
+.line {
+  background: $my-white;
+  width: 55px;
+  height: 1px;
+  margin: 20px auto 40px;
+}
+
+.small {
+  font-size: small;
+}
+
+.btn {
+  color: #0a0a0a;
+  background: $my-white;
+  display: block;
+  width: 300px;
+  padding: 20px 40px;
+  margin: 40px auto;
+  cursor: pointer;
+  border-radius: 50px;
+  text-align: center;
+  // &:hover {
+  //   color: $my-white;
+  //   background-color: orange;
+  //   transition-delay: .3s;
+  // }
+}
+
+// ヘッダー
+.header {
+  background: #0a0a0a;
+  height: 10vh;
+  .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .nav_logo {
+      img {
+        height: 10vh;
+      }
+    }
+    .nav_icon {
+      a:hover {
+        color: orange;
+      }
+      a + a {
+        padding: 0 0 0 30px;
+      }
+    }
+    .nav_icon_sp {
+      display: none;
+    }
+  }
+}
+
+// メインビジュアル
+.mainvisual {
+  video {
+    width: 100%;
+    height: 90vh;
+    object-fit: cover;
+  }
+}
+
+// 開催日時
+.date {
+  text-align: center;
+  p {
+    font-size: 28px;
+  }
+}
+
+// お知らせ
+.news {
+  &_article {
+    padding: 40px;
+    border: 1px solid $my-white;
+    border-radius: 5px;
+  }
+  li {
+    padding: 5px 0;
+    border-bottom: 1px dotted $my-white;
+    span {
+      margin: 0 30px 0 0;
+    }
+  }
+}
+
+// 見どころ
+.points {
+  img {
+    width: 490px;
+    height: 490px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 16px 16px 4px 0px #ffa50099;
+  }
+  &_card {
+    margin: 80px 0;
+    display: flex;
+    &_text {
+      margin: auto 60px;
+      p {
+        margin: 40px 0;
+      }
+    }
+  }
+  .flex-wrap {
+    flex-wrap: wrap;
+  }
+  .flex-reverse {
+    flex-direction: row-reverse;
+  }
+}
+
+// アクセス
+.access {
+  &_ferry {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  p {
+    margin: 80px 0 40px;
+  }
+  img {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    margin: 0 0 120px 40px;
+  }
+}
+
+ /* --- テーブル全体のスタイル指定 --------------- */
+ .tableArea {
+  width          : 270px;             /* 100%幅     */
+  border-collapse: collapse;         /* 境界線結合 */
+  border-spacing : 0;                /* 罫線間余白 */
+  font-size      : 14px;              /* 文字サイズ */
+  background     : $main-color;          /* テーブル全体の背景色 */
+  border: 1px solid $my-white;
+}
+ /* --- ヘッダーのスタイル指定 ------------------- */
+.tableArea th {
+  text-align    : left;              /* 文字位置   */
+  font-weight   : bold;              /* 太文字     */
+  padding       : 8px;           /* 余白       */
+  // background    : #f0f0f0;           /* 背景色     */
+  // color: $main-color;
+}
+ /* --- 明細のスタイル指定 ----------------------- */
+.tableArea td {
+  text-align    : left;              /* 文字位置   */
+  padding       : 8px;           /* 余白       */
+}
+
+// フッター
+.footer {
+  background: #0a0a0a;
+  &_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &_nav ul {
+    display: flex;
+    li + li {
+      padding: 0 0 0 16px;
+    }
+  }
+  &_sns ul {
+    display: flex;
+    justify-content: flex-end;
+  }
+  &_sns li + li {
+    margin: 0 0 55px 20px;
+  }
+  .small {
+    text-align: center;
+  }
+}
+
+
+// @keyframes fade{
+//   0%{
+//     opacity: 0;
+//   }
+//   100%{
+//     opacity: 1;
+//   }
+// }
+
+@media screen and (max-width: 599px) {
+  body {
+    width: 100%;
+  }
+  .inner {
+    padding: 0;
+  }
+  .header {
+    .nav_icon_pc {
+      display: none;
+    }
+  }
+  .footer {
+    width: 100%;
+  }
+}

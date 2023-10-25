@@ -1,0 +1,332 @@
+@charset "UTF-8";
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, p, figure, blockquote, dl, dd {
+  margin: 0;
+}
+
+ul[role="list"], ol[role="list"] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img, picture {
+  max-width: 100%;
+  display: block;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    -webkit-animation-duration: .01ms !important;
+            animation-duration: .01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: .01ms !important;
+            transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  font-family: "Yu Gothic", "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Meiryo", sans-serif;
+  background: #0A1F32;
+  color: #f0f0f0;
+}
+
+section {
+  margin: 60px auto;
+}
+
+section + section {
+  margin: 120px 0 0 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: #f0f0f0;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+.my-white {
+  color: #f0f0f0;
+}
+
+.inner {
+  padding: 0 290px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: normal;
+  text-align: center;
+}
+
+.line {
+  background: #f0f0f0;
+  width: 55px;
+  height: 1px;
+  margin: 20px auto 40px;
+}
+
+.small {
+  font-size: small;
+}
+
+.btn {
+  color: #0a0a0a;
+  background: #f0f0f0;
+  display: block;
+  width: 300px;
+  padding: 20px 40px;
+  margin: 40px auto;
+  cursor: pointer;
+  border-radius: 50px;
+  text-align: center;
+}
+
+.header {
+  background: #0a0a0a;
+  height: 10vh;
+}
+
+.header .inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .inner .nav_logo img {
+  height: 10vh;
+}
+
+.header .inner .nav_icon a:hover {
+  color: orange;
+}
+
+.header .inner .nav_icon a + a {
+  padding: 0 0 0 30px;
+}
+
+.header .inner .nav_icon_sp {
+  display: none;
+}
+
+.mainvisual video {
+  width: 100%;
+  height: 90vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.date {
+  text-align: center;
+}
+
+.date p {
+  font-size: 28px;
+}
+
+.news_article {
+  padding: 40px;
+  border: 1px solid #f0f0f0;
+  border-radius: 5px;
+}
+
+.news li {
+  padding: 5px 0;
+  border-bottom: 1px dotted #f0f0f0;
+}
+
+.news li span {
+  margin: 0 30px 0 0;
+}
+
+.points img {
+  width: 490px;
+  height: 490px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+  -webkit-box-shadow: 16px 16px 4px 0px #ffa50099;
+          box-shadow: 16px 16px 4px 0px #ffa50099;
+}
+
+.points_card {
+  margin: 80px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.points_card_text {
+  margin: auto 60px;
+}
+
+.points_card_text p {
+  margin: 40px 0;
+}
+
+.points .flex-wrap {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.points .flex-reverse {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.access_ferry {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.access p {
+  margin: 80px 0 40px;
+}
+
+.access img {
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  margin: 0 0 120px 40px;
+}
+
+/* --- テーブル全体のスタイル指定 --------------- */
+.tableArea {
+  width: 270px;
+  /* 100%幅     */
+  border-collapse: collapse;
+  /* 境界線結合 */
+  border-spacing: 0;
+  /* 罫線間余白 */
+  font-size: 14px;
+  /* 文字サイズ */
+  background: #0A1F32;
+  /* テーブル全体の背景色 */
+  border: 1px solid #f0f0f0;
+}
+
+/* --- ヘッダーのスタイル指定 ------------------- */
+.tableArea th {
+  text-align: left;
+  /* 文字位置   */
+  font-weight: bold;
+  /* 太文字     */
+  padding: 8px;
+  /* 余白       */
+}
+
+/* --- 明細のスタイル指定 ----------------------- */
+.tableArea td {
+  text-align: left;
+  /* 文字位置   */
+  padding: 8px;
+  /* 余白       */
+}
+
+.footer {
+  background: #0a0a0a;
+}
+
+.footer_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer_nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer_nav ul li + li {
+  padding: 0 0 0 16px;
+}
+
+.footer_sns ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.footer_sns li + li {
+  margin: 0 0 55px 20px;
+}
+
+.footer .small {
+  text-align: center;
+}
+
+@media screen and (max-width: 599px) {
+  body {
+    width: 100%;
+  }
+  .inner {
+    padding: 0;
+  }
+  .header .nav_icon_pc {
+    display: none;
+  }
+  .footer {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
